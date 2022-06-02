@@ -229,13 +229,13 @@
     mode: u=rwX,g=rwX,o=rX
     recurse: yes
 
-# # Deploy with Ansistrano
-# - name: Do a initial deploy
-#   include_role:
-#     name: ansistrano.deploy
-#     apply:
-#       become: yes
-#       become_user: hyrax
+# Deploy with Ansistrano
+- name: Do a initial deploy
+  include_role:
+    name: ansistrano.deploy
+    apply:
+      become: yes
+      become_user: hyrax
 
 # Install and activate services
 - name: Create solr core
